@@ -128,7 +128,7 @@ function RenderDish({dish})
   {
     if (dish != null)
     {
-      return (
+      return (dish?
       <div  className="col-12 col-md-5 m-1">
         <Card>
             <CardImg top src={baseUrl + dish.image} alt={dish.name} />
@@ -137,7 +137,7 @@ function RenderDish({dish})
               <CardText>{dish.description}</CardText>
             </CardBody>
         </Card>
-      </div>
+      </div>:null
             );
      }
      else
